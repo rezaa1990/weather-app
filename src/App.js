@@ -53,6 +53,14 @@ const App = () => {
   const [minTemmp5 , setMinTemp5] = useState([]);
   const [minTemmp6 , setMinTemp6] = useState([]);
   const [minTemmp7 , setMinTemp7] = useState([]);
+
+  const [weatherCondition1 , setweatherCondition1] = useState([]);
+  const [weatherCondition2 , setweatherCondition2] = useState([]);
+  const [weatherCondition3 , setweatherCondition3] = useState([]);
+  const [weatherCondition4 , setweatherCondition4] = useState([]);
+  const [weatherCondition5 , setweatherCondition5] = useState([]);
+  const [weatherCondition6 , setweatherCondition6] = useState([]);
+  const [weatherCondition7 , setweatherCondition7] = useState([]);
   
   const [dailyWindSpeed , setDailyWindSpeed] = useState([]);
 
@@ -109,13 +117,55 @@ const App = () => {
       setMinTemp6(res.data.daily.temperature_2m_min[5])
       setMinTemp7(res.data.daily.temperature_2m_min[6])
 
-      console.log(res.data)
+      console.log(res.data.daily.weathercode[0])
+      setweatherCondition1(res.data.daily.weathercode[0])
+      setweatherCondition2(res.data.daily.weathercode[1])
+      setweatherCondition3(res.data.daily.weathercode[2])
+      setweatherCondition4(res.data.daily.weathercode[3])
+      setweatherCondition5(res.data.daily.weathercode[4])
+      setweatherCondition6(res.data.daily.weathercode[5])
+      setweatherCondition7(res.data.daily.weathercode[6])
 
       //console.log(res.data.daily.windspeed_10m_max)
       //setTime(res.data.daily.time)
       //setDailyWindSpeed(res.data.daily.windspeed_10m_max)
     })
   },[])
+
+  const WMO = {
+    0:'Clear sky',
+    1:'Mainly clear',
+    2:'partly cloudy',
+    3:'overcast',
+    45:'Fog',
+    48:'depositing rime fog',
+    51:"Drizzle:Light",
+    53:"Drizzle:moderate",
+    55:"Drizzle:dense intensity",
+    56:"Freezing Drizzle:Light",
+    57:"Freezing Drizzle:dense intensity",
+    61:"Rain:light",
+    63:"Rain:moderate",
+    65:"Rain:heavy intensity",
+    66:"Freezing Rain:Light",
+    67:"Freezing Rain:heavy intensity",
+    71:"Snow fall:Slight",
+    73:"Snow fall:moderate",
+    75:"Snow fall:heavy intensity", 
+    77:"Snow grains",
+    80:"Rain showers:Slight",
+    81:"Rain showers:moderate",
+    82:"Rain showers:violent",
+    85:"Snow showers:slight ",
+    86:"Snow showers:heavy",
+    95:"Thunderstorm:Slight" ,
+    95:"Thunderstorm:moderate", 
+    96:"Thunderstorm with slight hail",
+    99:"Thunderstorm with heavy hail"
+  }
+
+  console.log(weatherCondition1)
+  console.log(WMO[weatherCondition1]);
 
   return (
     <Table
@@ -168,11 +218,17 @@ const App = () => {
            minTemmp6={minTemmp6}
            minTemmp7={minTemmp7}
 
+           weatherCondition1= {WMO[weatherCondition1]}
+           weatherCondition2= {WMO[weatherCondition2]}
+           weatherCondition3= {WMO[weatherCondition3]}
+           weatherCondition4= {WMO[weatherCondition4]}
+           weatherCondition5= {WMO[weatherCondition5]}
+           weatherCondition6= {WMO[weatherCondition6]}
+           weatherCondition7= {WMO[weatherCondition7]}
+
 
     ></Table>
   );
-
-  
 }
 
 export default App;

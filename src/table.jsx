@@ -1,100 +1,91 @@
 const Table = (props) => {
     return ( 
         <>
-    <div class="container mt-3">
-  <table class="table">
-    {/* <thead>
-      <tr>
+    <div className="container mt-3 text-center">Tehran weekly weather
+  <table className="table">
+    <thead>
+      <tr className="table-danger">
+        <th className='text-center'>date</th>
+        <th className='text-center'>sunrise</th>
+        <th className='text-center'>sunset</th>
+        <th className='text-center'>precipitation_probability</th>
+        <th className='text-center'>weather_condition</th>
+        <th className='text-center'>temperature_max</th>
+        <th className='text-center'>temperature_min</th>
         
-        <th>sunrise</th>
-        <th>sunset</th>
-        <th>precipitation_probability</th>
-        <th>relativehumidity</th>
-        <th>temperature_max</th>
-        <th>temperature_min</th>
-        <th>icon</th>
-      </tr>
-    </thead> */}
+      </tr>   
+    </thead>
     <tbody>
-      <tr class="table-danger">
-        <td>date</td>
-        <td>sunrise</td>
-        <td>sunset</td>
-        <td>precipitation_probability</td>
-        <td>weather condition</td>
-        <td>temperature_max</td>
-        <td>temperature_min</td>
-        <td></td>
-      </tr>      
-      <tr class="table-primary">
-        <td>{props.date1}</td>
-        <td>{props.sunRise1}</td>
-        <td>{props.sunSet1}</td>
-        <td>{props.precipitation1}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp1}</td>
-        <td>{props.minTemmp1}</td>
-        <td>joe@example.com</td>
+   
+      <tr className="table-primary">
+        <td className='text-center'>{props.date1}</td>
+        <td className='text-center'>{props.sunRise1}</td>
+        <td className='text-center'>{props.sunSet1}</td>
+        <td className='text-center'>{props.precipitation1}%</td>
+        <td className='text-center'>{props.weatherCondition1}</td>
+        <td className='text-center'>{props.maxTemmp1} °C</td>
+        <td className='text-center'>{props.minTemmp1} °C</td>
+        
       </tr>
-      <tr class="table-success">
-        <td>{props.date2}</td>
-        <td>{props.sunRise2}</td>
-        <td>{props.sunSet2}</td>
-        <td>{props.precipitation2}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp2}</td>
-        <td>{props.minTemmp2}</td>
-        <td>joe@example.com</td>
+      <tr className="table-success">
+        <td className='text-center'>{props.date2}</td>
+        <td className='text-center'>{props.sunRise2}</td>
+        <td className='text-center'>{props.sunSet2}</td>
+        <td className='text-center'>{props.precipitation2}%</td>
+        <td className='text-center'>{props.weatherCondition2}</td>
+        <td className='text-center'>{props.maxTemmp2} °C</td>
+        <td className='text-center'>{props.minTemmp2} °C</td>
+        
       </tr>
-      <tr class="table-primary">
-        <td>{props.date3}</td>
-        <td>{props.sunRise3}</td>
-        <td>{props.sunSet3}</td>
-        <td>{props.precipitation3}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp3}</td>
-        <td>{props.minTemmp3} c</td>
-        <td>joe@example.com</td>
+      <tr className="table-primary">
+        <td className='text-center'>{props.date3}</td>
+        <td className='text-center'>{props.sunRise3}</td>
+        <td className='text-center'>{props.sunSet3}</td>
+        <td className='text-center'>{props.precipitation3}%</td>
+        <td className='text-center'>{props.weatherCondition3}</td>
+        <td className='text-center'>{props.maxTemmp3} °C</td>
+        <td className='text-center'>{props.minTemmp3} °C</td>
+        
       </tr>
-      <tr class="table-success">
-        <td>{props.date4}</td>
-        <td>{props.sunRise4}</td>
-        <td>{props.sunSet4}</td>
-        <td>{props.precipitation4}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp4}</td>
-        <td>{props.minTemmp4}</td>
-        <td>joe@example.com</td>
+      <tr className="table-success">
+        <td className='text-center'>{props.date4}</td>
+        <td className='text-center'>{props.sunRise4}</td>
+        <td className='text-center'>{props.sunSet4}</td>
+        <td className="text-center">{props.precipitation4}%</td>
+        <td className='text-center'>{props.weatherCondition4}</td>
+        <td className='text-center'>{props.maxTemmp4} °C</td>
+        <td className='text-center'>{props.minTemmp4} °C</td>
+        
       </tr>
-      <tr class="table-primary">
-        <td>{props.date5}</td>
-        <td>{props.sunRise5}</td>
-        <td>{props.sunSet5}</td>
-        <td>{props.precipitation5}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp5}</td>
-        <td>{props.minTemmp5}</td>
-        <td>joe@example.com</td>
+      <tr className="table-primary">
+        <td className='text-center'>{props.date5}</td>
+        <td className='text-center'>{props.sunRise5}</td>
+        <td className='text-center'>{props.sunSet5}</td>
+        <td className='text-center'>{props.precipitation5}%</td>
+        <td className='text-center'>{props.weatherCondition5}</td>
+        <td className='text-center'>{props.maxTemmp5} °C</td>
+        <td className='text-center'>{props.minTemmp5} °C</td>
+        
       </tr>
-      <tr class="table-success">
-        <td>{props.date6}</td>
-        <td>{props.sunRise6}</td>
-        <td>{props.sunSet6}</td>
-        <td>{props.precipitation6}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp6}</td>
-        <td>{props.minTemmp6}</td>
-        <td>joe@example.com</td>
+      <tr className="table-success">
+        <td className='text-center'>{props.date6}</td>
+        <td className='text-center'>{props.sunRise6}</td>
+        <td className='text-center'>{props.sunSet6}</td>
+        <td className='text-center'>{props.precipitation6}%</td>
+        <td className='text-center'>{props.weatherCondition6}</td>
+        <td className='text-center'>{props.maxTemmp6} °C</td>
+        <td className='text-center'>{props.minTemmp6} °C</td>
+        
       </tr>
-      <tr class="table-primary">
-        <td>{props.date7}</td>
-        <td>{props.sunRise7}</td>
-        <td>{props.sunSet7}</td>
-        <td>{props.precipitation7}</td>
-        <td>joe@example.com</td>
-        <td>{props.maxTemmp7}</td>
-        <td>{props.minTemmp7}</td>
-        <td>joe@example.com</td>
+      <tr className="table-primary">
+        <td className='text-center'>{props.date7}</td>
+        <td className='text-center'>{props.sunRise7}</td>
+        <td className='text-center'>{props.sunSet7}</td>
+        <td className='text-center'>{props.precipitation7}%</td>
+        <td className='text-center'>{props.weatherCondition7}</td>
+        <td className='text-center'>{props.maxTemmp7} °C</td>
+        <td className='text-center'>{props.minTemmp7} °C</td>
+        
       </tr>
     </tbody>
   </table>
