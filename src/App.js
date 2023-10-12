@@ -62,6 +62,10 @@ const App = () => {
   const [weatherCondition6 , setweatherCondition6] = useState([]);
   const [weatherCondition7 , setweatherCondition7] = useState([]);
 
+
+  const [errorr , setError] = useState(null);
+
+
   useEffect (() => {
     Axios.get('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_mean,sunrise,sunset,weathercode&hourly=weathercode&timezone=Asia/Tehran').then((res)=>{
 
@@ -121,6 +125,11 @@ const App = () => {
       setweatherCondition6(res.data.daily.weathercode[5])
       setweatherCondition7(res.data.daily.weathercode[6])
     })
+    .catch(error => {
+      setError(`error name: ${error.name},
+      error message: ${error.message}`);
+    });
+
   },[])
 
   const WMO = {
@@ -156,7 +165,8 @@ const App = () => {
   }
 
   return (
-    <Table
+  <>
+    {errorr == null ? (<Table
             date1={date1}
             date2={date2}
             date3={date3}
@@ -213,7 +223,8 @@ const App = () => {
            weatherCondition6= {WMO[weatherCondition6]}
            weatherCondition7= {WMO[weatherCondition7]}
 
-    ></Table>
+    ></Table>) : (<h1>{errorr}</h1>)}
+  </>
   );
 }
 
