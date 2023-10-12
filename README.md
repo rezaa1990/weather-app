@@ -4,7 +4,7 @@
 "This is a React web application that fetches weather data for Tehran from the website https://open-meteo.com and displays it in a structured table.
 One of the initial challenges of this project was the need to define a large number of states due to the substantial amount of data. However, with a better idea, I stored all the data in a single state and then used it in the table. If you review the commit history, you will find details about this."
 
-
+![Screenshot 2023-10-12 at 15-49-03 React App](https://github.com/rezaa1990/weather-app/assets/137599894/e7de0bb3-960c-4bcc-a40a-59fea99ede45)
 
 
 
