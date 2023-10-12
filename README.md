@@ -1,3 +1,14 @@
+
+
+# Description :
+"This is a React web application that fetches weather data for Tehran from the website https://open-meteo.com and displays it in a structured table.
+One of the initial challenges of this project was the need to define a large number of states due to the substantial amount of data. However, with a better idea, I stored all the data in a single state and then used it in the table. If you review the commit history, you will find details about this."
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
